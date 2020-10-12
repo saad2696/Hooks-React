@@ -29,11 +29,11 @@ function App() {
       {/* <IntervalClassCounter/> */}
       {/* <IntervalHookCounter/> */}
       {/* <DataFetching /> */}
-      <UserContext.Provider value={"Saad"}>
+      {/* <UserContext.Provider value={"Saad"}>
         <ChannelContext.Provider value={"yourdailyetech"}>
           <ComponentC /> 
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
     </div>
   );
 }
