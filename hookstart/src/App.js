@@ -17,11 +17,18 @@ import "./App.css";
 // import FourHookCounter from "./components/FourHookCounter";
 import AreduceContext from "./components/AreduceContext";
 import BreduceContext from "./components/BreduceContext";
+import ClassTimer from "./components/ClassTimer";
+import CounterOne from "./components/CounterOne";
+import CounterTwo from "./components/CounterTwo";
 import CreduceContext from "./components/CreduceContext";
 import DataFetching from "./components/DataFetching";
 import DataFetchingOne from "./components/DataFetchingOne";
 import DataFetchingTwo from "./components/DataFetchingTwo";
-import MemoHookCounter from "./components/MemoHookCounter";
+import DocTitleOne from "./components/DocTitleOne";
+import DocTitleTwo from "./components/DoctitleTwo";
+// import MemoHookCounter from "./components/MemoHookCounter";
+ import RefHookTimer from "./components/RefHookTimer";
+// import FocusInput from "./components/FocusInput";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -46,7 +53,14 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
 <div className="App">
-  <MemoHookCounter/>
+  <CounterOne/>
+  <CounterTwo/>
+  {/* <DocTitleOne/>
+  <DocTitleTwo/> */}
+  {/* <RefHookTimer/> */}
+  {/* <ClassTimer/> */}
+  {/* <FocusInput/> */} 
+  {/* <MemoHookCounter/> */}
   {/* <DataFetchingTwo/> */}
 {/* <DataFetchingOne/> */}
 </div>
