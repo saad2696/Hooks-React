@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-
+//have multiple user reducer using same function 
 const initialState = 0;
 //action instruction to reducer function
 const reducer = (currentState, action) => {
@@ -15,25 +15,27 @@ const reducer = (currentState, action) => {
   }
 };
 //array destructioring to get count and dispatch
-function ReducerCounterOne() {
+function ReducerCounter3() {
   const [count, dispatch] = useReducer(reducer, initialState);
+  const [count2 , dispatchTwo ] =  useReducer(reducer , initialState);
 
   return (
     <div>
-      <div>{count}</div>
+      <div>
+          <div>Count one - {count}</div>
       <button
         onClick={() => {
           dispatch("increment");
         }}
       >
-        Increment
+        +
       </button>
       <button
         onClick={() => {
           dispatch("decrement");
         }}
       >
-        Decrement
+        -
       </button>
       <button
         onClick={() => {
@@ -42,8 +44,33 @@ function ReducerCounterOne() {
       >
         Reset
       </button>
+      </div>
+      <div>
+          <div>Count two - {count2}</div>
+      <button
+        onClick={() => {
+          dispatch("increment");
+        }}
+      >
+        +
+      </button>
+      <button
+        onClick={() => {
+          dispatchTwo("decrement");
+        }}
+      >
+        -
+      </button>
+      <button
+        onClick={() => {
+          dispatchTwo("reset");
+        }}
+      >
+        Reset
+      </button>
+      </div>
     </div>
   );
 }
 
-export default ReducerCounterOne;
+export default ReducerCounter3;
